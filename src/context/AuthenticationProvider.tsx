@@ -21,6 +21,7 @@ function AuthenticationProvider(props: { children: any}) {
 
     const login = (user: User) => {
         setUser(user);
+        localStorage.setItem("user", JSON.stringify(user));
         setIsInitialRender(false);
     }
 

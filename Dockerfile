@@ -6,8 +6,9 @@ WORKDIR ${PROJECT_DIR}
 
 COPY package.json .
 
-RUN yarn install
+RUN yarn
 
 COPY . .
 
-CMD ["yarn", "run", "dev", "--host"]
+EXPOSE 3000
+CMD ["yarn", "run", "dev"]
